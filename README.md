@@ -1,4 +1,6 @@
 #  JsScan
+<img src="https://raw.githubusercontent.com/Or4ngm4n/JsScan/main/jsscan.png" width="250" height="70">
+
 Python Scripts to help you discover sensitive data like apikeys, accesstoken, authorizations, jwt,..etc in JavaScript files
 
 # Usage 
