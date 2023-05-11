@@ -16,20 +16,35 @@ http://sub1.example.com
 http://sub2.example.com
 http://sub3.example.com
 
-─$ python extract.py urls.txt js-url.txt
-─$ cat js-url.txt
-http://example.com/tE8mZYyMFkFuQaS9PqHkE/_buildManifest.js
-http://sub1.example.com/static/main.bundle.js
-http://sub2.example.com/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js
-http://sub3.example.com/static/loadCookieModal.js
-─$ python download.py js-url.txt js-directory
-─$ ls -al /js-directory
--rw-r--r-- 1 or4ng or4ng 251696 Apr 26 13:40 polyfills-c67a75d1b6f99dc8.js
--rw-r--r-- 1 or4ng or4ng 251696 Apr 26 13:40 _buildManifest.js
--rw-r--r-- 1 or4ng or4ng 251696 Apr 26 13:40 loadCookieModal.js
--rw-r--r-- 1 or4ng or4ng 251696 Apr 26 13:40 main.bundle.js
-─$ python jsscan.py js-directory report.txt
-─$ cat report.txt
+─$ python jsscan.py urls.txt js-url.txt js-directory
+
+░░█ █▀ █▀ █▀▀ ▄▀█ █▄░█
+█▄█ ▄█ ▄█ █▄▄ █▀█ █░▀█
+
+URL [+] http://example.com/tE8mZYyMFkFuQaS9PqHkE/_buildManifest.js saved to js-url.txt
+URL [+] http://sub1.example.com/static/main.bundle.js saved to js-url.txt
+URL [+] http://sub2.example.com/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js saved to js-url.txt
+URL [+] http://sub3.example.com/static/loadCookieModal.js saved to js-url.txt
+Save all .js into directory
+File [+] http://example.com/tE8mZYyMFkFuQaS9PqHkE/_buildManifest.js
+File [+] http://sub1.example.com/static/main.bundle.js
+File [+] http://sub2.example.com/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js
+File [+] http://sub3.example.com/static/loadCookieModal.js
+Trying To Find Sinsitive Data ..
+google_captcha:
+6Ly93d3cudzMub3JnLzI.....
+6Ly93d3cudzMub3JnLzI.....
+square_access_token:
+EAAAAAQAAABoAAAAAAAK.....
+twilio_app_sid:
+AP7qgh0bgGyz8zcSjCD3mb7hYDmydewdYU....
+trello_api_key
+0bb5245c839141efbb997cfdc0d21057
+result Name :result.txt
+cat result.txt
+google_captcha:
+6Ly93d3cudzMub3JnLzI.....
+6Ly93d3cudzMub3JnLzI.....
 square_access_token:
 EAAAAAQAAABoAAAAAAAK.....
 twilio_app_sid:
@@ -37,5 +52,5 @@ AP7qgh0bgGyz8zcSjCD3mb7hYDmydewdYU....
 trello_api_key
 0bb5245c839141efbb997cfdc0d21057
 ```
-
+Thnaks For Help\Update this tool <a href="https://github.com/az7rb">@az7rb</a> ❤️
 inspired by <a href="https://github.com/m4ll0k/SecretFinder">@m4ll0k/SecretFinder</a> ❤️
