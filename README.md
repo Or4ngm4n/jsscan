@@ -11,10 +11,10 @@ extract all subdomain into txt file ( urls.txt ) using subfinder and httpx to ma
 ─$ subfinder -d example.com | httpx-toolkit -mc 200 -o urls.txt
 ─$ cat urls.txt
 
-http://example.com
-http://sub1.example.com
-http://sub2.example.com
-http://sub3.example.com
+      http://example.com
+      http://sub1.example.com
+      http://sub2.example.com
+      http://sub3.example.com
 
 ─$ python jsscan.py urls.txt js-url.txt js-directory
 
@@ -41,16 +41,18 @@ AP7qgh0bgGyz8zcSjCD3mb7hYDmydewdYU....
 trello_api_key
 0bb5245c839141efbb997cfdc0d21057
 result Name :result.txt
-cat result.txt
-google_captcha:
-6Ly93d3cudzMub3JnLzI.....
-6Ly93d3cudzMub3JnLzI.....
-square_access_token:
-EAAAAAQAAABoAAAAAAAK.....
-twilio_app_sid:
-AP7qgh0bgGyz8zcSjCD3mb7hYDmydewdYU....
-trello_api_key
-0bb5245c839141efbb997cfdc0d21057
+
+
+-$ cat result.txt
+      google_captcha:
+      6Ly93d3cudzMub3JnLzI.....
+      6Ly93d3cudzMub3JnLzI.....
+      square_access_token:
+      EAAAAAQAAABoAAAAAAAK.....
+      twilio_app_sid:
+      AP7qgh0bgGyz8zcSjCD3mb7hYDmydewdYU....
+      trello_api_key
+      0bb5245c839141efbb997cfdc0d21057
 ```
 Thnaks For Help\Update this tool <a href="https://github.com/az7rb">@az7rb</a> ❤️
 inspired by <a href="https://github.com/m4ll0k/SecretFinder">@m4ll0k/SecretFinder</a> ❤️
